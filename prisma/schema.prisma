@@ -1,0 +1,44 @@
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id        String      @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  email    String @unique
+  username String @unique
+  password String 
+
+  admin Boolean @default(false)
+
+  requests Request[]
+}
+
+model Request {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  type    String // "consultation", "document-editing", etc
+  subtype String? // "financial", "cv", etc.
+
+  message String?
+
+  credentials String? // optional for application/foreign payments
+  status      String  @default("pending") // approved, rejected, etc.
+
+  note String? // for admins to put notes
+}
