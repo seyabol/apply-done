@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FeatureCard from "@/app/ui/FeatureCard";
 import { auth } from "@/auth";
 import Link from "next/link";
@@ -42,11 +43,18 @@ export default async function HomePage() {
    return (
       <main className="flex flex-col gap-16">
          {/* Hero Section 1 */}
-         <section
-            className="relative h-[600px] bg-cover bg-center flex items-center justify-center text-center"
-            style={{ backgroundImage: "url('/hero-1.jpeg')" }}
-         >
+         <section className="relative h-[600px] flex items-center justify-center text-center overflow-hidden">
+            {/* Background image with Next.js Image */}
+            <Image
+               src="/hero-1.jpeg"
+               alt="Hero background"
+               fill
+               className="object-cover"
+               priority
+            />
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/50" />
+            {/* Content */}
             <div className="relative z-10 flex flex-col gap-6 items-center text-white">
                <h1 className="text-3xl md:text-5xl font-bold">اپلای دان، بی‌حد و مرز</h1>
                <p className="text-lg md:text-xl max-w-2xl">
@@ -63,7 +71,7 @@ export default async function HomePage() {
                      href="/services"
                      className="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition text-white font-semibold"
                   >
-                     خدمات{" "}
+                     خدمات
                   </Link>
                </div>
             </div>
@@ -85,11 +93,17 @@ export default async function HomePage() {
          </section>
 
          {/* Hero Section 2 */}
-         <section
-            className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center"
-            style={{ backgroundImage: "url('/hero-2.jpeg')" }}
-         >
+         <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden">
+            {/* Background image with Next.js Image */}
+            <Image
+               src="/hero-2.jpeg"
+               alt="Hero background 2"
+               fill
+               className="object-cover"
+            />
+            {/* Overlay */}
             <div className="absolute inset-0 bg-indigo-950/70" />
+            {/* Content */}
             <div className="relative z-10 flex flex-col gap-6 items-center text-white">
                <h2 className="text-2xl md:text-4xl font-bold">همراه شما در مسیر مهاجرت</h2>
                <p className="text-lg max-w-2xl">با بیش از ده سال تجربه در امور مهاجرتی، تیم ما آماده همراهی شماست.</p>

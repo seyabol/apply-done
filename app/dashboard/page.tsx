@@ -11,7 +11,7 @@ export default async function Page() {
   const user = session?.user;
 
   return (
-    <main className="max-w-5xl mx-auto py-10 px-4" dir="rtl">
+    <main className="max-w-5xl  mx-auto h-screen py-10 px-4" dir="rtl">
       <h1 className="text-3xl font-bold mb-6">
         سلام {user?.username || user?.email || "کاربر"} 👋
       </h1>
