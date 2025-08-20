@@ -25,19 +25,19 @@ export default async function Page() {
       {
          title: "خدمات ورود",
          description: "رزرو وقت و دریافت راهنمایی برای خدمات ورود",
-         href: "/dashboard/services-entry",
+         href: "/services-entry",
          icon: <GlobeAltIcon   className="w-8 h-8"/>,
       },
       {
          title: "ویرایش مکاتبات انگلیسی",
          description: "ویرایش انگیزه نامه، رزومه، توصیه نامه و سایر اسناد",
-         href: "/dashboard/document-editing",
+         href: "/document-editing",
          icon: <DocumentTextIcon  className="w-8 h-8"/>,
       },
       {
          title: "اپلیکیشن فی ها و پرداخت های ارزی",
          description: "پرداخت و مدیریت هزینه‌های اپلیکیشن و پرداخت شهریه",
-         href: "/dashboard/application-fees",
+         href: "/application-fees",
          icon: <BanknotesIcon  className="w-8 h-8" />,
       },
       {
