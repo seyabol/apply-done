@@ -7,6 +7,9 @@ import Footer from "@/app/ui/Footer";
 export const metadata: Metadata = {
    title: "Apply Done",
    description: "Apply Done - Your Way to Prosperity",
+   icons: {
+      icon: "/favicon.png",
+   },
 };
 
 export const experimental_ppr = true;
