@@ -43,7 +43,7 @@ export default async function Page() {
       {
          title: "پذیرش تحصیلی کانادا",
          description: "راهنمای پذیرش، ویزا و بورسیه‌های تحصیلی",
-         href: "/dashboard/admissions",
+         href: "/admissions",
          icon: <CheckBadgeIcon  className="w-8 h-8"/>,
       },
    ];
