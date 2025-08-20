@@ -32,8 +32,8 @@ export default function Footer() {
           {[
             { href: "/", label: "خانه" },
             { href: "/consultation", label: "مشاوره" },
-            { href: "/dashboard/services-entry", label: "خدمات ورود" },
-            { href: "/dashboard/document-editing", label: "ویرایش اسناد" },
+            { href: "/services-entry", label: "خدمات ورود" },
+            { href: "/document-editing", label: "ویرایش اسناد" },
             { href: "/about", label: "درباره ما" },
           ].map((link) => (
             <Link
