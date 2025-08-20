@@ -20,7 +20,7 @@ export default function FeatureCard({ title, description, href, icon }: FeatureC
         "hover:bg-indigo-50"
       )}
     >
-      {icon && <div className="mb-3 text-indigo-600">{icon}</div>}
+      {icon && <div className="mb-3 mx-auto text-indigo-600">{icon}</div>}
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </Link>

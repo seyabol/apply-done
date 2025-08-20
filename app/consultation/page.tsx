@@ -22,8 +22,8 @@ export default function ConsultationPage() {
    ];
 
    return (
-      <main className="flex h-full justify-center items-center p-4">
-         <div className="w-full max-w-lg flex flex-col space-y-6 p-8 bg-white shadow-xl rounded-2xl border border-indigo-100">
+      <main className="flex h-screen justify-center items-center p-4">
+         <div className="w-full  max-w-lg flex flex-col space-y-6 p-8 bg-white shadow-xl rounded-2xl border border-indigo-100">
             {/* Logo */}
             <div className="mx-auto">
                <UniversityLogo variant="dark" />

@@ -24,7 +24,7 @@ export default function RequestForm({ title, fields, submitLabel = "ارسال �
    const [errorMessage, formAction] = useActionState<ErrorState, FormData>(action, undefined);
 
    return (
-      <form action={formAction} className="space-y-4">
+      <form action={formAction} className="space-y-4 ">
          <h2 className="text-2xl text-center font-bold text-indigo-700">{title}</h2>
          {fields.map((field) => (
             <div key={field.name} className="flex flex-col">
